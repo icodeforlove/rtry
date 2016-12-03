@@ -4,32 +4,6 @@
 
 rtry allows you to easily add promise retry logic to classes, and methods
 
-
-```javascript
-class Example1 {
-    @rtry({verbose: false, delay: attempt => attempt * 1})
-    static method (success) {
-        if (!success) {
-            throw new Error('Example1');
-        }
-    }
-
-}
-
-@rtry({verbose: false, delay: attempt => attempt * 1})
-class Example {
-    static method (success) {
-        // ...
-    }
-}
-
-const example3 = rtry({verbose: false, delay: attempt => attempt * 1}, (success) => {
-    if (!success) {
-        throw new Error('Example3');
-    }
-});
-```
-
 ## install
 
 ```
