@@ -37,7 +37,7 @@ function wrap(options, func) {
                 }
 
                 if (beforeRetryOption) {
-                	await (beforeRetryOption.call(scope, {retry}));
+                	await (beforeRetryOption.call(scope, {retry, error}));
                 }
             }
         }

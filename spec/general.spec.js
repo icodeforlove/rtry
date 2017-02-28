@@ -1,6 +1,36 @@
 import rtry from '../dist/index';
 import delay from '../dist/delay';
 
+
+
+
+
+
+class CLS {
+    @rtry({
+    	verbose: true,
+  		retries: 10
+    })
+    async method1 () {
+    	console.log('YAY');
+    }
+
+    async method () {
+    	await this.method1();
+    }
+}
+
+let cls = new CLS();
+cls.method().then(() => {
+	console.log('CLEAN');
+}, error => {
+	console.log(error.stack);
+});
+
+
+
+
+
 let functionExample = () => {
 	const rand = Math.random();
 

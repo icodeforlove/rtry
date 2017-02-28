@@ -131,7 +131,7 @@ function wrap(options, func) {
                         }
 
                         _context.next = 33;
-                        return beforeRetryOption.call(scope, { retry: retry });
+                        return beforeRetryOption.call(scope, { retry: retry, error: _context.t0 });
 
                     case 33:
                         _context.next = 1;

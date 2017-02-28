@@ -62,7 +62,7 @@ you can handle error logging in a custom way as well
 ```javascript
 const debug = requre('debug')('example');
 
-@rtry({handler: error => debug(error.stack)})
+@rtry({beforeRetry: ({retry, error}) => debug(error.stack)})
 class Example {
     static canError () {
         throw new Error('abcd');

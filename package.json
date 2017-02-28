@@ -1,6 +1,6 @@
 {
   "name": "rtry",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "rtry allows you to easily add promise retry logic to classes, and functions",
   "main": "dist/index.js",
   "scripts": {
